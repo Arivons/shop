@@ -1,0 +1,13 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: eureka-server
+  security:
+    user:
+      name: root #配置用户名
+      password: root #配置密码
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

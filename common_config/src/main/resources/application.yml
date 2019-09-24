@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: common-config
+  cloud:
+    config:
+      server:
+         git:
+          uri: https://gitee.com/arvincloud/bz.git
+    bus:
+      enabled: true
+  rabbitmq:
+    addresses: 192.168.75.150
+    username: guest
+    password: guest
+    port: 5672
+    virtual-host: /
+server:
+  port: 9000
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@eureka-server:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh #在 Greewitch.SR2 版中需要开启
